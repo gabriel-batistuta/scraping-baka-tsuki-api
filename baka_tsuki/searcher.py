@@ -34,7 +34,10 @@ def get_links_light_novels_by_language(soup:BeautifulSoup):
             language = parse_language_in_string(tag_a.text)
 
             list_novels_by_language.append(
-                {language:link}
+                {
+                    'language':language,
+                    'link':link
+                }
             )
 
         return list_novels_by_language
